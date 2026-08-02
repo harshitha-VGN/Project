@@ -31,7 +31,7 @@ function AuthForm() {
             return;
         }
         try {
-            const { data } = await axios.get(`${API_URL}/api/auth/check-username/${username}`);
+            const { data } = await axios.get(`${API_URL}/api/users/check-username/${username}`);
            if (!data.isAvailable) {
                 setErrors(prev => ({ ...prev, username: 'This username is already taken.' }));
                 handleNotification('Username is already taken, please choose another.', 'error');
