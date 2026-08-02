@@ -19,7 +19,7 @@ const Footer = () => {
                     <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-300">
                         <Link to="/explore" className="hover:text-indigo-400 transition-colors">Explore</Link>
                         <Link to="/submitexperience" className="hover:text-indigo-400 transition-colors">Share</Link>
-                        <Link to="/resume-uploader" className="hover:text-indigo-400 transition-colors">Resume Tool</Link>
+                        <Link to="/resume-analyzer" className="hover:text-indigo-400 transition-colors">Resume Tool</Link>
                     </nav>
                 </div>
 
