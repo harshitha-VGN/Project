@@ -34,16 +34,4 @@ const Footer = () => {
     );
 };
 
-const SocialLink = ({ href, label, children }) => (
-    <a 
-        href={href}
-        aria-label={label}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-400 hover:text-indigo-400 transition-colors"
-    >
-        {children}
-    </a>
-);
-
 export default Footer;
