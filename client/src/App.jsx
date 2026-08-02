@@ -6,7 +6,6 @@ import Profile from './pages/profile.jsx';
 import Dashboard from './pages/dashboard.jsx';
 import MyExperiences from './pages/explore.jsx';
 import SubmitExperience from './pages/submitexperience.jsx';
-import './App.css';
 import AuthForm from './pages/authentication.jsx';
 import Home from './pages/Home.jsx';
 import MyContributions from './pages/MyContributions';
