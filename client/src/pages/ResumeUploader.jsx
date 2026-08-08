@@ -69,16 +69,18 @@ const ResumeUploader = () => {
         } catch (err) {
             console.error('Upload failed:', err);
             
-            if (err.response && err.response.data.toString() === '[object Blob]') {
+            if (err.response?.data instanceof Blob) {
                 const errText = await err.response.data.text();
                 try {
                     const errJson = JSON.parse(errText);
                     handleNotification(errJson.error || 'An unexpected error occurred.', 'error');
                 } catch (parseError) {
-                    handleNotification('An unexpected error occurred and it could not be parsed.', 'error');
+                    handleNotification(errText || 'An unexpected error occurred.', 'error');
                 }
+            } else if (err.response?.data?.error) {
+                handleNotification(err.response.data.error, 'error');
             } else {
-                handleNotification('An unexpected server error occurred.', 'error');
+                handleNotification(err.message || 'An unexpected server error occurred.', 'error');
             }
         } finally {
             setIsLoading(false);

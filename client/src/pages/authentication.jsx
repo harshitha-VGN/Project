@@ -122,6 +122,7 @@ function AuthForm() {
         setIsLogin(toLogin);
         setErrors({});
         setFormData({ username: '', email: '', password: '', confirmPassword: '' });
+        setNotification({ message: '', type: '' });
     };
 
     return (
